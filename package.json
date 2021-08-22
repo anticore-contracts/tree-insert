@@ -1,0 +1,28 @@
+{
+  "name": "@anticore-contracts/tree-insert",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "An anticore contract to insert some elements `before`/`after` another one.",
+  "exports": {
+    "./on.js": "./on.js",
+    "./when.js": "./when.js"
+  },
+  "author": "@anticore-contracts",
+  "license": "MIT",
+  "peerDependencies": {
+    "anticore": ">=4.5.3"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0"
+  },
+  "scripts": {
+    "lint": "eslint --report-unused-disable-directives ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anticore-contracts/tree-insert.git"
+  },
+  "bugs": {
+    "url": "https://github.com/anticore-contracts/tree-insert/issues"
+  }
+}
