@@ -1,7 +1,7 @@
 # @anticore-contracts/tree-insert
 
 An [anticore](https://github.com/Lcfvs/anticore) contract to insert some
-elements `before`/`after` another one.
+elements `before`/`after`/`instead` another one.
 
 ## Install
 
@@ -25,9 +25,9 @@ import '@anticore-contracts/tree-insert/when.js'
 
 ## Lifecycle
 
-* Matches `.anticore > [data-before], .anticore > [data-after]`
+* Matches `.anticore > [data-before], .anticore > [data-after], .anticore > [data-instead]`
 * Takes the value as a query selector to find the target
-* Inserts the match `before` or `after` the target
+* Inserts the match `before` or `after` the target or replace it on `instead`
 
 ## License
 

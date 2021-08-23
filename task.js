@@ -1,8 +1,15 @@
 export default element => {
   const { dataset, ownerDocument } = element
-  const { after, before } = dataset
-  const method = after ? 'after' : 'before'
-  const target = ownerDocument.querySelector(after || before)
+  const { after, before, instead } = dataset
+  const [selector] = [after, before, instead].filter(Boolean)
 
-  target[method](element)
+  const method = new Map([
+    [after, 'after'],
+    [before, 'before'],
+    [instead, 'replaceWith']
+  ]).get(selector)
+
+  const target = ownerDocument.querySelector(selector)
+
+  target?.[method](element)
 }
