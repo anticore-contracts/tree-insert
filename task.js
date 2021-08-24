@@ -1,12 +1,14 @@
 export default element => {
   const { dataset, ownerDocument } = element
-  const { after, before, instead } = dataset
-  const [selector] = [after, before, instead].filter(Boolean)
+  const { after, append, before, prepend, replace } = dataset
+  const [selector] = [after, append, before, prepend, replace].filter(Boolean)
 
   const method = new Map([
     [after, 'after'],
+    [append, 'append'],
     [before, 'before'],
-    [instead, 'replaceWith']
+    [prepend, 'prepend'],
+    [replace, 'replaceWith']
   ]).get(selector)
 
   const target = ownerDocument.querySelector(selector)
