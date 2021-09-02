@@ -25,9 +25,14 @@ import '@anticore-contracts/tree-insert/when.js'
 
 ## Lifecycle
 
-* Matches `.anticore > [data-before], .anticore > [data-after], .anticore > [data-prepend], .anticore > [data-append], .anticore > [data-replace]`
+* Matches
+  * `.anticore > [data-before]`
+  * `.anticore > [data-after]`
+  * `.anticore > [data-prepend]`
+  * `.anticore > [data-append]`
+  * `.anticore > [data-replace]`
 * Takes the value as a query selector to find the target
-* Inserts the match `before` or `after` the target or replace it on `instead`
+* Inserts the match `before`/`after`/`prepend`/`append`/`replace` the target
 
 ## License
 

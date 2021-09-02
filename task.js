@@ -13,5 +13,5 @@ export default element => {
 
   const target = ownerDocument.querySelector(selector)
 
-  target?.[method](element)
+  target && target[method](element)
 }
